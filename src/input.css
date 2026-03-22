@@ -1,0 +1,113 @@
+@import "tailwindcss";
+
+@theme {
+    --color-navy-900: #0a1628;
+    --color-navy-800: #0f1f3d;
+    --color-navy-700: #152a4a;
+    --color-navy-600: #1a3558;
+    --color-gold-400: #d4a843;
+    --color-gold-500: #c9952c;
+    --color-gold-600: #b8860b;
+    --font-sans: 'Inter', system-ui, sans-serif;
+}
+
+/* ===== Custom Styles ===== */
+
+* {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', system-ui, sans-serif;
+}
+
+.gradient-gold {
+    background: linear-gradient(135deg, #d4a843, #b8860b);
+}
+
+.gradient-navy {
+    background: linear-gradient(180deg, #0a1628 0%, #152a4a 100%);
+}
+
+.gold-border-top {
+    border-top: 3px solid #d4a843;
+}
+
+.text-gold-gradient {
+    background: linear-gradient(135deg, #d4a843, #f0d78c, #d4a843);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.card-hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-hover:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.4s ease;
+}
+
+.faq-answer.open {
+    max-height: 300px;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+}
+
+.faq-icon {
+    transition: transform 0.3s ease;
+}
+
+.faq-icon.rotated {
+    transform: rotate(45deg);
+}
+
+.whatsapp-btn {
+    animation: pulse-green 2s infinite;
+}
+
+@keyframes pulse-green {
+    0% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5);
+    }
+    70% {
+        box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+    }
+}
+
+.hero-overlay {
+    background: linear-gradient(135deg, rgba(10, 22, 40, 0.95) 0%, rgba(21, 42, 74, 0.85) 50%, rgba(10, 22, 40, 0.9) 100%);
+}
+
+.service-icon {
+    width: 64px;
+    height: 64px;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+.float-anim {
+    animation: float 3s ease-in-out infinite;
+}
+
+.gold-line {
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #d4a843, transparent);
+}
